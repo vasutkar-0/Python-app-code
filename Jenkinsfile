@@ -9,7 +9,7 @@ pipeline {
         stage("Clone Code") {
             steps {
                 git branch: 'main',
-                    url: ''
+                    url: 'https://github.com/vasutkar-0/Python-app-code.git'
             }
         }
 
