@@ -2,14 +2,14 @@ pipeline {
     agent any
     environment {
         IMAGE_NAME = "image-app"
-        TARGET_SERVER = "ubuntu@TARGET_SERVER_IP"
+        TARGET_SERVER = "vaishnavi.asutkar@172.25.2.113"
     }
 
     stages {
         stage("Clone Code") {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/yourusername/image-app.git'
+                    url: ''
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
         stage("Deploy to Target Server") {
             steps {
                 sh """
-                scp image-app.tar $TARGET_SERVER:/home/ubuntu/
+                scp image-app.tar $TARGET_SERVER:/home/vaishnavi.asutkar/
                 ssh $TARGET_SERVER '
                   docker load < image-app.tar
                   docker stop image-app || true
