@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         IMAGE_NAME = "image-app"
-        TARGET_SERVER = "vaishnavi.asutkar@172.25.2.113"
+        TARGET_SERVER = "vaishnavi.asutkar@172.25.3.113"
     }
 
     stages {
